@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "218013249573",
+    "project_id": "madhvani-traders-app-8bae1",
+    "storage_bucket": "madhvani-traders-app-8bae1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218013249573:android:6fcf62c5a80877fb1a8fcc",
+        "android_client_info": {
+          "package_name": "com.example.madhvani_traders_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218013249573-vnu2g2cgv1tbdl3a75fj9adm922dn4ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW2yaDzjWH3WfMA3yuZnvTokpRBTnSVE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218013249573-vnu2g2cgv1tbdl3a75fj9adm922dn4ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
