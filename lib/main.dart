@@ -2,10 +2,13 @@ import 'package:madhvani_traders_app/screens/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:madhvani_traders_app/screens/auth/welcome_back_page.dart';
+// import 'localnotificationflutter/mainscreen.dart';
+import 'package:madhvani_traders_app/notificationservice.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  NotificationService().initNotification();
 
   runApp(const MyApp());
 }
@@ -25,6 +28,7 @@ class _MyAppState extends State<MyApp> {
 
   //   return firebaseApp;
   // }
+  // db = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +41,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         fontFamily: "Montserrat",
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
       // home: FutureBuilder(
       //   future: Firebase.initializeApp(),
       //   builder: (context, snapshot) {
