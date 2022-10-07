@@ -1,8 +1,11 @@
 import 'package:madhvani_traders_app/app_properties.dart';
-import 'package:madhvani_traders_app/screens/auth/welcome_back_page.dart';
+// import 'package:madhvani_traders_app/screens/auth/welcome_back_page.dart';
 import 'package:flutter/material.dart';
+import 'package:madhvani_traders_app/screens/main/main_page.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -34,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   void navigationPage() {
     Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (_) => WelcomeBackPage()));
+        .pushReplacement(MaterialPageRoute(builder: (_) => MainPage()));
   }
 
   @override
@@ -60,9 +63,9 @@ class _SplashScreenState extends State<SplashScreen>
                     text: const TextSpan(
                         style: TextStyle(color: Colors.black),
                         children: [
-                          TextSpan(text: 'Powered by '),
+                          TextSpan(text: 'Designed by: '),
                           TextSpan(
-                              text: 'group.io',
+                              text: 'group 7',
                               style: TextStyle(fontWeight: FontWeight.bold))
                         ]),
                   ),

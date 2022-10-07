@@ -4,12 +4,13 @@ import 'package:madhvani_traders_app/models/product.dart';
 import 'package:madhvani_traders_app/screens/product/product_page.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ProductList extends StatelessWidget {
   List<Product> products;
 
   final SwiperController swiperController = SwiperController();
 
-  ProductList({required this.products});
+  ProductList({super.key, required this.products});
 
   @override
   Widget build(BuildContext context) {
@@ -136,8 +137,8 @@ class ProductCard extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             product.name,
-                            style:
-                                const TextStyle(color: Colors.white, fontSize: 16.0),
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 16.0),
                           ),
                         )),
                     Align(

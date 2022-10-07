@@ -5,6 +5,8 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/material.dart';
 
 class RecommendedList extends StatefulWidget {
+  const RecommendedList({super.key});
+
   @override
   State<RecommendedList> createState() => _RecommendedListState();
 }
@@ -45,7 +47,7 @@ class _RecommendedListState extends State<RecommendedList> {
               ),
               const Center(
                   child: Text(
-                'Recommended',
+                'Trending',
                 style: TextStyle(
                     color: darkGrey,
                     fontSize: 16.0,

@@ -4,31 +4,34 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 class TrackingPage extends StatefulWidget {
+  const TrackingPage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _TrackingPageState createState() => _TrackingPageState();
 }
 
 class _TrackingPageState extends State<TrackingPage> {
   final List<Location> locations = [
-    Location('Kolkata Facility', DateTime(2019, 6, 5, 5, 23, 4),
+    Location('Kikoni', DateTime(2022, 6, 5, 5, 23, 4),
         showHour: false, isHere: false, passed: true),
-    Location('Hyderabad Facility', DateTime(2019, 6, 6, 5, 23, 4),
+    Location('Freedom square', DateTime(2022, 6, 6, 5, 23, 4),
         showHour: false, isHere: false, passed: true),
     Location(
-      'Chennai Facility',
-      DateTime(2019, 6, 9, 5, 23, 4),
+      'Kikoni',
+      DateTime(2022, 6, 9, 5, 23, 4),
       showHour: false,
       isHere: true,
     ),
     Location(
-      'Kerala Facility',
-      DateTime(2019, 6, 10, 5, 23, 4),
+      'Freedom square',
+      DateTime(2022, 6, 10, 5, 23, 4),
       showHour: true,
       isHere: false,
     ),
   ];
 
-  String selectedProduct = 'Boat Headphones Bass boost 100v';
+  String selectedProduct = 'Kakira Sugar';
 
   @override
   Widget build(BuildContext context) {

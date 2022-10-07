@@ -7,6 +7,8 @@ import 'package:madhvani_traders_app/screens/wallet/wallet_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +17,8 @@ class ProfilePage extends StatelessWidget {
         top: true,
         child: SingleChildScrollView(
           child: Padding(
-            padding:
-                const EdgeInsets.only(left: 16.0, right: 16.0, top: kToolbarHeight),
+            padding: const EdgeInsets.only(
+                left: 16.0, right: 16.0, top: kToolbarHeight),
             child: Column(
               children: <Widget>[
                 const CircleAvatar(

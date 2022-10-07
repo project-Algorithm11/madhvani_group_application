@@ -4,7 +4,10 @@ import 'package:pin_code_text_field/pin_code_text_field.dart';
 import 'package:madhvani_traders_app/screens/main/main_page.dart';
 
 class ConfirmOtpPage extends StatefulWidget {
+  const ConfirmOtpPage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _ConfirmOtpPageState createState() => _ConfirmOtpPageState();
 }
 
@@ -190,7 +193,8 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
                             pinBoxWidth: 60,
                             pinBoxRadius: 5,
                             defaultBorderColor: Colors.transparent,
-                            pinBoxColor: const Color.fromRGBO(255, 255, 255, 0.8),
+                            pinBoxColor:
+                                const Color.fromRGBO(255, 255, 255, 0.8),
                             maxLength: 4,
                           ),
                         ),
