@@ -5,8 +5,13 @@ import 'package:madhvani_traders_app/screens/request_money/request_amount_page.d
 import 'package:madhvani_traders_app/screens/request_money/request_page.dart';
 import 'package:madhvani_traders_app/screens/send_money/send_page.dart';
 import 'package:flutter/material.dart';
+import 'package:timezone/timezone.dart' as tz;
+import 'package:timezone/data/latest.dart' as tz;
+import 'package:madhvani_traders_app/notificationservice.dart';
 
 class WalletPage extends StatefulWidget {
+  const WalletPage({super.key});
+
   @override
   _WalletPageState createState() => _WalletPageState();
 }
@@ -26,11 +31,13 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    animController =
-        AnimationController(vsync: this, duration: const Duration(milliseconds: 300));
+    animController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 300));
     openOptions = Tween(begin: 0.0, end: 300.0).animate(animController);
     getUsers();
     super.initState();
+
+    tz.initializeTimeZones();
   }
 
   @override
@@ -126,12 +133,28 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: <Widget>[
-                                        InkWell(
-                                            onTap: () => Navigator.of(context)
-                                                .push(MaterialPageRoute(
-                                                    builder: (_) =>
-                                                        SendPage())),
-                                            child: const Text('Pay')),
+                                        // InkWell(
+                                        //     onTap: () => Navigator.of(context)
+                                        //         .push(MaterialPageRoute(
+                                        //             builder: (_) =>
+                                        //                 SendPage())),
+                                        //     child: const Text('Pay')),
+                                        GestureDetector(
+                                          onTap: () {
+                                            NotificationService()
+                                                .cancelAllNotifications();
+                                          },
+                                          child: Container(
+                                            height: 40,
+                                            width: 200,
+                                            color: Colors.red,
+                                            child: Center(
+                                              child: Text(
+                                                "Cancel All Notifications",
+                                              ),
+                                            ),
+                                          ),
+                                        ),
                                         InkWell(
                                             onTap: () => Navigator.of(context)
                                                 .push(MaterialPageRoute(
@@ -245,7 +268,8 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                                             child: Text(
                                               user.phone,
                                               textAlign: TextAlign.center,
-                                              style: const TextStyle(fontSize: 10),
+                                              style:
+                                                  const TextStyle(fontSize: 10),
                                             ),
                                           ),
                                         ],
