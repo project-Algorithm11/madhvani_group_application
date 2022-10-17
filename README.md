@@ -1,6 +1,5 @@
 # Madhvani_Group_Application
 
-A recces project by group 7
 
 ### TEAM
 
