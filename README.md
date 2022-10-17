@@ -1,13 +1,11 @@
 # Madhvani_Group_Application
 
-Product Functionality and Screenshots 
-Take online orders from clients 
+Product Functionality
+1. Take online orders from clients 
 
-Take payments using MTN mobile money
+2. Take payments using MTN mobile money
 	
-Track delivery of products to clients
-
-
+3. Track delivery of products to clients
 
 ### TEAM
 
