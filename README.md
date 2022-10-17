@@ -1,25 +1,19 @@
 # Madhvani_Group_Application
 
-Project Goals
+    Project Goals
 
 Madhvani Group is a standalone application that will provide users with simplified e-commerce shopping experience. 
 To get desired functionality, Madhvani Group Application will have one main component in the form of a client which will connect to multiple cloud services. The client will be responsible for all user interface components (registration, login, ordering, and mobile money payment) and communication between the cloud services (MTN mobile money API, Google Maps API, Firebase) through SDKs. The cloud services will then manage data, client connections, and user requests by using their respective development tools/services.
 
 This application will most certainly solve our client’s challenge with the Time-consuming movements to physically place orders and stressful queuing for payments.  
 
-Product Functionality
+    Product Functionality
+
 1. Take online orders from clients 
 
 2. Take payments using MTN mobile money
 	
 3. Track delivery of products to clients
-
-### TEAM
-
-* Nshabiirwe kizzah
-* Aineruhanga paul
-* Mubeezi Timothy Eric
-* Ketra Vanessa
 
 Home Page:
 
